@@ -60,3 +60,27 @@ console.log(Boolean(sign));
 //Boolean(Number/String);
 
 
+/***********************oprations************************/
+
+//tricky conversions
+console.log("1"+2);//12
+console.log(1+"2");//12
+console.log(1+2+3+"7");//67 -->arithmetic result of all numbers before first string ,
+// after that all will be treated as string
+console.log("5"+6+7+8);//5678
+
+console.log(1+3+5+"7"+8+9+"2"+6);//978926;
+
+console.log(7+true);//conversion of true into number
+console.log(true+7);
+console.log((true + true)*(true+true));
+
+let num=90;
+console.log(++num);//assign then print
+console.log(num);
+console.log(num++);//print then assign
+console.log(num);
+
+//use MDN for documentation;
+
+
