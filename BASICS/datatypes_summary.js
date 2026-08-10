@@ -70,5 +70,43 @@ console.log(arr[0]);
 
 console.log(typeof arr);//object
 
+/*********************************************************************/
+//stack(Primitive)-->copy of original value;
+//Heap(Non-Primitive)-->reference of original value;
+
+
+//stack memory explanation;
+
+let student1="abhishek kumar";
+console.log(student1);
+
+let student2=student1;//pass by value;
+console.log(student2);
+
+student2="abhiman";//no change in student 1;
+console.log(student1);
+console.log(student2);
+
+//Note: student1 and student 2 arev stored in stack memory:
+
+//Heap memory Explanation:
+
+let user={
+  name:"alexa47",
+  id:78643,
+  email:"xyz@gmail.com"
+}//user is stored in stack but {name ,id ,email } is stored in Heap;
+
+console.table([user.name,user.id,user.email]);
+
+let newUser=user;//pass by reference -->
+console.table([newUser.name,newUser.id,newUser.email]);
+
+//changes in newUser causes changes in user because of pass by reference;
+newUser.email="abhi@gamil.com";
+console.table([user.name,user.id,user.email]);//user
+console.table([newUser.name,newUser.id,newUser.email]);//newUser
+
+//  user----->{name,id,email}<-----newUser  //
 
 
