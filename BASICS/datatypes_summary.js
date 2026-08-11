@@ -108,5 +108,7 @@ console.table([user.name,user.id,user.email]);//user
 console.table([newUser.name,newUser.id,newUser.email]);//newUser
 
 //  user----->{name,id,email}<-----newUser  //
+console.log(user);//print all attributes of user;-->{ name: 'alexa47', id: 78643, email: 'abhi@gamil.com' }
+console.log(newUser);//print all attributes of newUser
 
 
