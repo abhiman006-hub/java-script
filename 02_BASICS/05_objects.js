@@ -18,12 +18,12 @@ console.log(master);
 //APIs
 
 //json file:(object with no name );// in json keys and values both are string
-{
-    "name":"abhishek kumar",
-    "roll":"2025UGCS016",
-    "branch":"computer science and engineering"
+// {
+//     "name":"abhishek kumar",
+//     "roll":"2025UGCS016",
+//     "branch":"computer science and engineering"
 
-}
+// }
 
 //json file (array with no name):// elements of array as object;
 [
