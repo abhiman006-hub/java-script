@@ -120,3 +120,57 @@ function IsLoggedIn(arr){
 }
 
 IsLoggedIn(["radhe","krishna","shiva","parvati"]);
+
+//++++++++++++++++++++++++++++++Interesting++++++++++++++++++++++++++++++++
+
+
+//function declaration
+
+//method 1.
+//function call be anywhere,above or below declaration;
+console.log(addOne(7));//8
+function addOne(num){
+    return num+1;
+}
+console.log(addOne(3));//4
+
+
+//method 2.
+//function call only below declaration
+//storing function in a variable
+// let function_name=function(parameters){ // code ...}
+// function call ----->>>> function_name(local variable);
+
+//console.log(addTwo(5));---->cannot call before declaration --->>>ERROR
+let addTwo=function(nums){
+    return nums+2;
+}
+console.log(addTwo(4));//6
+
+
+//*************************************SCOPE *********************** */
+
+//scope of variable={...............variable declared inside a block is valid only in that block}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
