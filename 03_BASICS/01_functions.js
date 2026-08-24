@@ -155,7 +155,102 @@ console.log(addTwo(4));//6
 
 
 
+//use of this keyword
+//this----->current object
+//to use object keys inside object ---> this.key;
+let nwuser={
+    id:"abhiman006",
+    password:"abhi_pro",
 
+    greet:function(){
+        console.log(this.id+" ,welcome to javaScript World...");
+        console.log(this);//this--->object //this.key=object_name.key
+    }
+
+}
+
+nwuser.greet();
+nwuser.id="abhishek";
+nwuser.greet();
+console.log(this);//{}
+
+function chai(){
+    console.log(this);
+}
+
+chai();
+//output
+/*<ref *1> Object [global] {
+  global: [Circular *1],
+  clearImmediate: [Function: clearImmediate],
+  setImmediate: [Function: setImmediate] {
+    Symbol(nodejs.util.promisify.custom): [Getter]
+  },
+  clearInterval: [Function: clearInterval],
+  clearTimeout: [Function: clearTimeout],
+  setInterval: [Function: setInterval],
+  setTimeout: [Function: setTimeout] {
+    Symbol(nodejs.util.promisify.custom): [Getter]
+  },
+  queueMicrotask: [Function: queueMicrotask],
+  structuredClone: [Function: structuredClone],
+  atob: [Function: atob],
+  btoa: [Function: btoa],
+  performance: [Getter/Setter],
+  fetch: [Function: fetch],
+  crypto: [Getter],
+  navigator: [Getter],
+  sum: 33,
+  i: 2
+}
+  */
+
+//arrow functions
+
+// const welcome=function(){
+//     console.log("you are welcomed...!")
+// }
+
+/*
+    //arrow function declaration 
+
+    //method 1.
+    let function_name = () =>{
+        //code
+    }
+
+    //method 2.
+    let function_name = (parameters) => console.log("hello world!");
+
+
+*/
+
+const welcome = () => {
+    console.log("you are welcomed...!");
+    console.log(this);//{}
+    console.log(this.id);//undefined
+}
+
+welcome();//functional call
+
+const call= () => console.log("om namah shivay...");
+
+call();
+
+const Twosum = (num1,num2) =>  (num1+num2);//using parenthesis don't use return statement
+
+console.log(Twosum(7,9));
+
+const TwoPro = (num1,num2) => {
+    return num1*num2;//using curly braces ,use return statement
+}
+
+console.log(TwoPro(7,8));
+
+//returning object
+const person = (name,dob) => ({id:name+dob,pass:dob+name});
+
+console.log(person("abhi","2006"));
 
 
 
