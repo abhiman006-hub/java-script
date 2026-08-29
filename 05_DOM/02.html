@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek v/s Abhiman</title>
+</head>
+<body style="background-color: black; color: aliceblue;" >
+    <h1>HELLO javaScript</h1>
+</body>
+<script>
+    //creatinng a new element!
+    const div=document.createElement('div');
+    console.log(div);
+
+    //adding class attribute
+    div.className="main";
+
+    //adding id attribute
+    div.id=Math.floor(Math.random()*10+1);
+
+    //setting attributes
+    div.setAttribute("title","main title");//key,value
+    div.style.backgroundColor="red";
+    div.style.color="yellow";
+
+    div.style.padding="12px";
+    div.style.borderColor="white";
+
+    //div.innerText="Abhiman v/s Abhishek";
+    const addText=document.createTextNode("Abhiman v/s Abhishek");
+
+    //attaching addText to div
+    div.appendChild(addText);
+
+    //attaching div to body
+    document.body.appendChild(div);
+
+</script>  
+</html>

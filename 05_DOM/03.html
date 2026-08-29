@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhiman v/s Abhishek | DOM</title>
+</head>
+<body style="background-color:grey; color:yellow;">
+
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+
+
+    
+</body>
+<script>
+    //editing and removing elements in DOM
+
+    function addLanguage(langName){
+        const li=document.createElement('li');
+        li.innerHTML=langName;// traversal of tree
+        // document.querySelector('.className_of_parent').appendChild(child_element);
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addLanguage("python");
+    addLanguage("kotlin");
+
+    function addOptiLanguage(langName){
+        const li=document.createElement('li');
+        const addLang=document.createTextNode(langName);
+        li.appendChild(addLang);// direct appending of node
+        // document.querySelector('.className_of_parent').appendChild(child_element);
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addOptiLanguage("java");
+    addOptiLanguage("typeScript");
+
+
+    //editing of element:
+
+    //second element
+    const secondLang=document.querySelector("li:nth-child(2)");
+    console.log(secondLang);
+    //secondLang.innerHTML("Mojo");
+    const newli=document.createElement('li');
+    newli.textContent="Mojo";
+    secondLang.replaceWith(newli);
+
+    //first element
+    const firstLANG=document.querySelector("li:first-child");
+    console.log(firstLANG);
+    //secondLang.innerHTML("Mojo");
+    const newlii=document.createElement('li');
+    newlii.textContent="Dojo";
+    firstLANG.replaceWith(newlii);
+        
+    //removing element;
+    const lastlang=document.querySelector("li:last-child");
+    lastlang.remove();
+
+</script>
+</html>

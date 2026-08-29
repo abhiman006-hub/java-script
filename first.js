@@ -1,1 +1,1 @@
-console.log("Om Namah Shivay!");
+// DOM : Document Object Model

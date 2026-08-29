@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+  
+   <title>Abhiman v/s Abhishek</title>
+</head>
+<body style="background-color: black;color: #f5f2f2;">
+   <div class="parent">
+      <p id="abhi">Lorem ipsum dolor sit amet.</p>
+      <p id="abhi">Lorem ipsum dolor sit amet consectetur.</p>
+      <p id="abhi">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="child">
+
+         <article class="essay"> Lorem ipsum dolor sit amet parent.</article>
+         <article class="essay">Lorem ipsum, dolor sit amet consectetur adipisicing parent.</article>
+         <article class="essay">Lorem ipsum dolor, sit amet consectetur adipisicing parent.</article>
+
+
+      </div>
+
+   </div>
+   <div class="child">
+         <article class="essay"> Lorem ipsum dolor sit amet child.</article>
+         <article class="essay">Lorem ipsum, dolor sit amet consectetur adipisicing child.</article>
+         <article class="essay">Lorem ipsum dolor, sit amet consectetur adipisicing child.</article>
+
+   </div>
+   
+</body>
+<script>
+   const parentObj=document.querySelector('.parent');//html element as node(object)
+   console.log(parentObj);
+
+   console.log(parentObj.firstChild);
+   console.log(parentObj.lastChild);
+
+
+   //create element;
+
+   const newNode=document.createElement('div');
+   newNode.setAttribute("id","newnode");
+   newNode.setAttribute("class","neww");
+   newNode.textContent="hello abhiman..!";
+   parentObj.appendChild(newNode);
+
+   console.log(parentObj.lastChild);
+
+   const obj1=parentObj.querySelectorAll('.essay');// root node = parentObj
+   console.log(obj1);
+
+   for(let i=0;i<obj1.length;i++){
+      console.log(obj1[i].textContent);
+   }
+
+   const obj2=document.querySelectorAll('.essay');//root node = document
+   console.log(obj2+" hello ");
+   for(let i=0;i<obj2.length;i++){
+      console.log(obj2[i].textContent);
+   }
+
+
+   //creating node
+   //const para=parentObj.createElement('article');
+   // createElement is not a method of parentObj
+   //createelement is a method of documenet object
+   const para=document.createElement('article');
+   para.setAttribute("class","parChild");
+   para.textContent="om namah shivay..!";
+   parentObj.appendChild(para);
+   console.log(parentObj);
+
+</script>
+
+</html>
