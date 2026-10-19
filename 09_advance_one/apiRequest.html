@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+  
+   <title>Abhiman v/s Abhishek</title>
+</head>
+<body style="background-color: black;color: #f5f2f2;">
+   <div class="parent">
+      <p id="abhi">Lorem ipsum dolor sit amet.</p>
+      <p id="abhi">Lorem ipsum dolor sit amet consectetur.</p>
+      <p id="abhi">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="child">
+
+         <article class="essay"> Lorem ipsum dolor sit amet parent.</article>
+         <article class="essay">Lorem ipsum, dolor sit amet consectetur adipisicing parent.</article>
+         <article class="essay">Lorem ipsum dolor, sit amet consectetur adipisicing parent.</article>
+
+
+      </div>
+
+   </div>
+   <div class="child">
+         <article class="essay"> Lorem ipsum dolor sit amet child.</article>
+         <article class="essay">Lorem ipsum, dolor sit amet consectetur adipisicing child.</article>
+         <article class="essay">Lorem ipsum dolor, sit amet consectetur adipisicing child.</article>
+
+   </div>
+
+
+   <script>
+
+    console.log("hello abhiman !")
+
+
+
+    const requestUrl='https://api.github.com/users/hiteshchoudhary'
+    const xhr =new XMLHttpRequest();
+
+    //readystate = tells what is the current situation of our request
+    // total readystates=0,1,2,3,4
+
+    
+    console.log(xhr.readyState);// 0 --> You have created the XHR
+    // object, but haven't called open() yet.
+
+
+   // xhr.open(method,url) ---> method= GET,POST,UPDATE,DELETE
+   //Calling open() alone does not send a request to the server.
+
+    // example 1
+
+    xhr.open('GET',requestUrl);
+    console.log(xhr.readyState)// 1 --> You called open()
+    // and specified which server you want to contact.
+
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState==4){
+            const data=JSON.parse(this.responseText);
+            console.log(typeof data);
+            console.log(data)
+            console.log(data.followers);
+            console.log(data.bio)
+        }
+    }
+
+    xhr.send()
+
+
+    // example 2
+
+    const student={
+        name:"abhishek kumar",
+        roll:"2025ugcs016",
+        semester:"3",
+        branch:"computer science and engineering"
+    }
+
+    const std=new XMLHttpRequest();
+
+
+
+
+
+   </script>
+
+
+
+   
+</body>
