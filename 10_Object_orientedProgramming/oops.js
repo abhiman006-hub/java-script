@@ -1,3 +1,4 @@
+/*
 
 const user={ // constructor function for this ==> User
     username:"abhsihek kumar",
@@ -62,3 +63,42 @@ user1.greeting();// it will not throw any error
 
 //user2.getUserdetails();throws error because it is not defined in constructor 
 //                       function
+
+
+*/
+
+/************************************************************* */
+
+
+
+
+
+const college = {                                  // Create a parent object
+    study: function() {                             // Define a common method
+        console.log("Student is studying");         // Print a message
+    }
+};
+
+const students = {                                   // Create another object
+    username: "Abhishek",                            // Add its own property
+    branch:"computer science and engineering"
+};
+
+Object.setPrototypeOf(students, college);             // Link student to college
+
+console.log(students.username);                       // Abhishek
+students.study();                                     // Student is studying
+console.log(students.branch)
+
+
+const parent={
+    parentname:"ramu kumar",
+    address:"shivaji chowk"
+}
+
+Object.setPrototypeOf(parent,students);//parent can access all properties and 
+// methods of students
+
+console.log(parent);
+console.log(parent.username)
+console.log(parent.branch)
